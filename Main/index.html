@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>The Door Games</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="navbar">
@@ -27,15 +28,58 @@
         </div>
     </div>
     <div class="content">
-        <!--이곳에 컨텐츠를 채워주세요-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('assets/images/carousel0.png');">
+                </div>
+                <div class="carousel-item" style="background-image: url('assets/images/carousel1.png');">
+                </div>
+                <div class="carousel-item" style="background-image: url('assets/images/carousel2.png');">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="container">
+            <a href="#" class="button">
+                <img src="assets/images/noticeBtn.png" alt="Image 1">
+                <div class="overlay"></div>
+            </a>
+            <a href="#" class="button">
+                <img src="assets/images/communityBtn.png" alt="Image 2">
+                <div class="overlay"></div>
+            </a>
+            <a href="#" class="button">
+                <img src="assets/images/helpBtn.png" alt="Image 3">
+                <div class="overlay"></div>
+            </a>
+        </div>
+
     </div>
     <div class="footer">
         <div class="footer-content">
             <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
-            <p>더 도어 게임즈가 궁금하신가요?</p>
+                <p>더 도어 게임즈가 궁금하신가요?</p>
             </a>
             <p>©The Door Games</p>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
