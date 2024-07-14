@@ -5,6 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="assets/css/index.css">
+
+    <style>
+        .content {
+            flex-direction: column;
+            align-items: center;
+            margin: 0%;
+            text-align: center;
+        }
+
+        #extendHeaderImg {
+            width: 100%;
+            height: 30vh;
+            object-fit: none;
+        }
+
+        #profileArea {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 30vh;
+        }
+
+        .profileImg, .profileAlertImg {
+            height: 50%;
+            margin-top: 5vh;
+            margin-bottom: 1vh;
+        }
+
+        #selectArea {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #selectArea ul {
+            list-style: none;
+            margin: 2vh 5vw;
+            height: 5vh;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #selectArea li {
+            list-style: none;
+            margin: 0 7vw;
+        }
+        #selectArea li a {
+            text-decoration: none black;
+        }
+        #selectArea li a:link {
+            color: black;
+        }
+        #selectArea li a:visited {
+            color: black;
+        }
+        #selectArea li a:hover {
+            font-weight: bold;
+        }
+
+        #selectArea #userInfo {
+            display: flex;
+            margin: 3vh 10vw;
+            width: 100%;
+            float: left;
+        }
+
+        #selectArea #userInfo div {
+            margin: 2vh 15vw;
+            float: left;
+            width: 50%;
+            background: lightblue;
+        }
+
+        .divLine {
+            border-left: 1px solid black;
+            display: inline;
+            width: 0;
+        }
+
+
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -28,6 +112,38 @@
     </div>
     <div class="content">
         <!--이곳에 컨텐츠를 채워주세요-->
+        <div> <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg"></div>
+        
+        <div id="profileArea">
+            <img src="assets/images/profileImg.png" class="profileImg">
+            <!-- profileAlertImg 이미지변경 함수처리 -->
+            <p>닉네임설정</p>
+        </div>
+        
+        <div id="selectArea">
+                <ul>
+                    <li><a href="#">개인정보</a></li>
+                    <li><a href="#">My 랭킹</a></li>
+                    <li><a href="#">내가 쓴 글</a></li>
+                    <li><a href="#">알림</a></li>  
+                </ul>
+
+            <div id="userInfo">            
+                <div>
+                    <b>기존정보</b>
+                    <p>아이디</p>
+                    <p>이름</p>
+                    <p>이메일</p>
+                    <p>닉네임</p>
+                    <p>생년월일</p>
+                </div>
+                <span class="divLine"></span>
+                <div>
+                    <b>회원정보 변경</b>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="footer">
         <div class="footer-content">
