@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>mypageRank</title>
     <link rel="stylesheet" href="assets/css/index.css">
+
     <style>
         .content {
             flex-direction: column;
             align-items: center;
             margin: 0%;
+            margin-top: 0.5vh;
             text-align: center;
+            width: 100%;
+
         }
 
         #extendHeaderImg {
@@ -52,6 +56,7 @@
         #selectArea li {
             list-style: none;
             margin: 0 7vw;
+            font-size: larger;
         }
         #selectArea li a {
             text-decoration: none black;
@@ -65,12 +70,9 @@
         #selectArea li a:hover {
             font-weight: bold;
         }
-        .divLine {
-            border-left: 1px solid black;
-            display: inline;
-            width: 0;
-        }
 
+      
+      
         .ticket-container {
             display: flex;
             margin: 20px auto;
@@ -130,6 +132,13 @@
             text-align: left;
             width: 85%; /* 유연하게 크기가 조정되도록 설정 */
         }
+        
+
+        
+        .emphaFont{
+            font-size: x-large;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -152,23 +161,30 @@
             </div>
         </div>
     </div>
+
     <div class="content">
         <div> <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg"></div>
         
         <div id="profileArea">
             <img src="assets/images/profileImg.png" class="profileImg">
-            <!-- profileAlertImg 이미지변경 함수처리 -->
-            <p>닉네임설정</p>
+            
+            <!-- profileAlertImg 이미지변경 함수처리가 안되고 알람있으면, 빨간불 들어오게 만들기 -->
+            <!-- 이미지 사용자가 변경할 수 있도록 만들기 -->
+              
+            <p class="emphaFont">닉네임123</p>
+
         </div>
         
         <div id="selectArea">
                 <ul>
-                    <li><a href="#">개인정보</a></li>
-                    <li><a href="#">My 랭킹</a></li>
-                    <li><a href="#">내가 쓴 글</a></li>
-                    <li><a href="#">알림</a></li>  
+                    <li><a href="mypageInfo.html">개인정보</a></li>
+                    <li><a href="mypageRank.html">My 랭킹</a></li>
+                    <li><a href="myPagePost.html">내가 쓴 글</a></li>
+                    <li><a href="myPageAlert.html">알림</a></li>  
                 </ul>
         </div>
+
+
         <div class="ticket-container">
             <div class="ticket-left">
                 <span>더 호스텔</span>
@@ -219,6 +235,8 @@
                 </div>
             </div>
         </div>
+
+      
     </div>
     <div class="footer">
         <div class="footer-content">
