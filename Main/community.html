@@ -3,8 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>게시판</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #headerImg {
+            width: 100%;
+            text-align: center;
+        }
+        .news-navbar {
+            text-align: left;
+            border-bottom: 1px solid black;
+            background-color: white;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        .news-navbar a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: black;
+        }
+        .news-navbar a:hover {
+            color: #6b0707;
+        }
+        .current-nav {
+            font-weight: bold;
+            color: #000000;
+        }
+        .btn-outline-success {
+            color: #ff9500;
+            border-color: #ff5900;
+        }
+        .btn-outline-success:hover {
+            color: #fff;
+            background-color: #ff9500;
+            border-color: #ff5900;
+        }
+        .table .thead-light th {
+            color: #495057;
+            background-color: rgb(255, 255, 146);
+            border-color: #6b0707;
+        }
+        .table a {
+            color: black;
+        }
+        .table a:hover {
+            color: #6b0707;
+        }
+        .table {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+            text-align: center;
+            border-color: #6b0707;
+        }
+        .table td.title {
+            text-align: left;
+        }
+        .pagination {
+            justify-content: center;
+        }
+        .pagination .page-link {
+            color: black;
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #28a745;
+            border-color: #28a745;
+            color: white;
+        }
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .search-container .current-nav {
+            margin-bottom: 0; /* 검색창과 함께 배치되므로 여백 제거 */
+        }
+        .search-container .form-inline {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .dropdown-toggle::after {
+            margin-left: 0.255em;
+        }
+        .post-container {
+            text-align: right;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -27,15 +122,179 @@
         </div>
     </div>
     <div class="content">
-        <!--이곳에 컨텐츠를 채워주세요-->
-    </div>
-    <div class="footer">
-        <div class="footer-content">
-            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
-            <p>더 도어 게임즈가 궁금하신가요?</p>
-            </a>
-            <p>©The Door Games</p>
+        <!--헤더이미지-->
+        <div>
+            <img id="headerImg" src="assets/images/extendHeaderImg.png" alt="HeaderImg">
+        </div>
+        <!-- 뉴스 네비게이션 바 -->
+        <div class="news-navbar">
+            <a class="nav-item" href="#">전체게시판</a>
+            <a class="nav-item" href="#">자유게시판</a>
+            <a class="nav-item" href="#">팬아트</a>
+        </div>
+        
+        <!-- 현재 선택된 뉴스 네비게이션과 검색창 -->
+        <div class="search-container">
+            <span class="current-nav">전체게시판</span>
+            <form class="form-inline">
+                <!-- <div class="input-group"> -->
+                    <!-- <div class="input-group-prepend"> -->
+                    <div>
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">제목</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">제목</a></li>
+                            <li><a class="dropdown-item" href="#">작성자</a></li>
+                        </ul>
+                    </div>
+                    <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+                    </div>
+                <!-- </div> -->
+            </form>
+        </div>
+    
+    
+        <!-- 게시글 목록 테이블 -->
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th style="width: 10%;">No</th>
+                        <th style="width: 60%;">제목</th>
+                        <th style="width: 10%;">작성자</th>
+                        <th style="width: 10%;">작성일자</th>
+                        <th style="width: 10%;">조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="title"><a href="post1.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="title"><a href="post2.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="title"><a href="post3.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="title"><a href="post4.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="title"><a href="post5.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="title"><a href="post6.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="title"><a href="post7.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="title"><a href="post8.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="title"><a href="post9.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="title"><a href="post10.html">게시물 제목</a></td>
+                        <td>작성자</td>
+                        <td>2022.01.01</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="post-container">
+                <button type="button" class="btn btn-outline-secondary" onclick="location.href='communityWrite.html'">글 등록</button>
+            </div>
+            
+        </div>
+        <br>
+            <!-- 페이지네이션 -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        
+
+        <div class="footer">
+            <div class="footer-content">
+                <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+                </a>
+                <p>©The Door Games</p>
+            </div>
         </div>
     </div>
+
+    <!-- JavaScript 추가 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.news-navbar .nav-item');
+            const currentNav = document.querySelector('.current-nav span');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    currentNav.textContent = this.textContent;
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
