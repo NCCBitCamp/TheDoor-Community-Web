@@ -3,8 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>mypageInfo</title>
     <link rel="stylesheet" href="assets/css/index.css">
+
+    <style>
+        .content {
+            flex-direction: column;
+            align-items: center;
+            margin: 0%;
+            margin-top: 0.5vh;
+            text-align: center;
+            width: 100%;
+        }
+
+        #extendHeaderImg {
+            width: 100%;
+            height: 30vh;
+            object-fit: none;
+        }
+
+        #profileArea {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 30vh;
+        }
+
+        .profileImg, .profileAlertImg {
+            height: 50%;
+            margin-top: 5vh;
+            margin-bottom: 1vh;
+        }
+
+        #selectArea {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #selectArea ul {
+            list-style: none;
+            margin: 2vh 5vw;
+            height: 5vh;
+            border-bottom: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #selectArea li {
+            list-style: none;
+            margin: 0 7vw;
+            font-size: larger;
+        }
+        #selectArea li a {
+            text-decoration: none black;
+        }
+        #selectArea li a:link {
+            color: black;
+        }
+        #selectArea li a:visited {
+            color: black;
+        }
+        #selectArea li a:hover {
+            font-weight: bold;
+        }
+
+        #selectArea #userInfo {
+            display: flex;
+            margin: 3vh 0;
+            width: 100%;
+            float: left;
+            justify-content: space-between;
+        }
+
+        #selectArea #userInfo .old {
+            margin: 2vh 0 0vh 14vw;
+            padding: 5%;
+            padding-top: 0;
+            float: left;
+            width: 50%;
+            border-right: 1px solid grey;
+            text-align: left;
+        }
+        
+        #selectArea #userInfo .new {
+            margin: 2vh 14vw 0vh 0;
+            padding: 5%;
+            padding-top: 0;
+            float: left;
+            width: 50%;
+            border-left: 1px solid grey;
+            text-align: left;
+        }
+        #selectArea #userInfo .old div, #selectArea #userInfo .new div{
+            height: 10vh;
+        }
+       
+
+        .fixedUserInfo {
+            border: 2px solid black;
+            border-radius: 5%;
+            width: 20vw;
+            height: 5vh;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .new input{
+            border-radius: 5%;
+            width: 20vw;
+            height: 5vh;    
+        }
+
+        .emphaFont{
+            font-size: x-large;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -26,8 +142,92 @@
             </div>
         </div>
     </div>
+
     <div class="content">
-        <!--이곳에 컨텐츠를 채워주세요-->
+        <div> <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg"></div>
+        
+        <div id="profileArea">
+            <img src="assets/images/profileImg.png" class="profileImg">
+            
+            <!-- profileAlertImg 이미지변경 함수처리가 안되고 알람있으면, 빨간불 들어오게 만들기 -->
+            <!-- 이미지 사용자가 변경할 수 있도록 만들기 -->
+              
+            <p class="emphaFont">닉네임123</p>
+        </div>
+        
+        <div id="selectArea">
+                <ul>
+                    <li><a href="mypageInfo.html">개인정보</a></li>
+                    <li><a href="mypageRank.html">My 랭킹</a></li>
+                    <li><a href="myPagePost.html">내가 쓴 글</a></li>
+                    <li><a href="myPageAlert.html">알림</a></li>  
+                </ul>
+
+            <div id="userInfo">            
+                <div class="old">
+                    <legend class="emphaFont">기존정보</legend>
+                    <hr>
+                    <br>
+                    <div>
+                        <label>아이디</label>
+                        <p class="fixedUserInfo">백앤드로 데이터 받아 고정하기</p>
+                    </div>
+                    <br>
+                    <div>
+                        <label>이름</label>
+                        <p class="fixedUserInfo">백앤드로 데이터 받아 고정하기</p>
+                    </div>
+                    <br>
+                    <div>
+                        <label>이메일</label>
+                        <p class="fixedUserInfo">백앤드로 데이터 받아 고정하기</p>
+                    </div>
+                    <br>
+                    <div>
+                        <label>닉네임</label>
+                        <p class="fixedUserInfo">백앤드로 데이터 받아 고정하기</p>
+                    </div>
+                    <br>
+                    <div>
+                        <label>생년월일</label>
+                        <p class="fixedUserInfo">백앤드로 데이터 받아 고정하기</p>
+                    </div>
+                </div>
+
+                <div class="new">
+                    <legend class="emphaFont">회원정보 변경</legend>
+                    <hr>
+                    <br>
+                    <form action="#" method="post">
+                        <div>
+                            <label for="newPW">비밀번호</label><br>
+                            <input id="newPW" type="text">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="newPWCK">비밀번호 재입력</label><br>
+                            <input id="newPWCK" type="text">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="userEmail">이메일</label><br>
+                            <input id="userEmail" type="email">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="userNickName">닉네임</label><br>
+                            <input id="userNickName" type="text">
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <input type="submit" value="변경하기" class="emphaFont" style="background-color: black; color: white;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="footer">
         <div class="footer-content">
@@ -37,5 +237,6 @@
             <p>©The Door Games</p>
         </div>
     </div>
+
 </body>
 </html>
