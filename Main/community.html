@@ -7,48 +7,36 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        #headerImg {
+        #extendHeaderImg {
             width: 100%;
-            text-align: center;
-        }
-        .news-navbar {
-            text-align: left;
-            border-bottom: 1px solid black;
-            background-color: white;
-            padding: 10px 0;
-            margin-bottom: 20px;
-        }
-        .news-navbar a {
-            margin: 0 15px;
-            font-weight: bold;
-            color: black;
-        }
-        .news-navbar a:hover {
-            color: #6b0707;
+            height: 40vh;
+            object-fit: none;
         }
         .current-nav {
             font-weight: bold;
             color: #000000;
+            padding: 25px;
+            font-size: large;
         }
         .btn-outline-success {
-            color: #ff9500;
-            border-color: #ff5900;
+            color: #000000;
+            border-color: #b2b2b2;
         }
         .btn-outline-success:hover {
-            color: #fff;
-            background-color: #ff9500;
-            border-color: #ff5900;
+            color: #ffffff;
+            background-color: #c3ccd5;
+            border-color: #000000;
         }
         .table .thead-light th {
-            color: #495057;
-            background-color: rgb(255, 255, 146);
-            border-color: #6b0707;
+            color: #000000;
+            background-color: rgb(211, 218, 226);
+            border-color: #b2b2b2;
         }
         .table a {
             color: black;
         }
         .table a:hover {
-            color: #6b0707;
+            color: #3b3ea5;
         }
         .table {
             max-width: 1200px;
@@ -57,7 +45,7 @@
         .table td, .table th {
             vertical-align: middle;
             text-align: center;
-            border-color: #6b0707;
+            border-color: #b2b2b2;
         }
         .table td.title {
             text-align: left;
@@ -68,11 +56,11 @@
         .pagination .page-link {
             color: black;
         }
-        .pagination .page-item.active .page-link {
+        /* .pagination .page-item.active .page-link {
             background-color: #28a745;
             border-color: #28a745;
             color: white;
-        }
+        } */
         .search-container {
             display: flex;
             justify-content: space-between;
@@ -97,6 +85,9 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+        }
+        .btn {
+            margin: 20px
         }
         
     </style>
@@ -123,19 +114,11 @@
     </div>
     <div class="content">
         <!--헤더이미지-->
-        <div>
-            <img id="headerImg" src="assets/images/extendHeaderImg.png" alt="HeaderImg">
-        </div>
-        <!-- 뉴스 네비게이션 바 -->
-        <div class="news-navbar">
-            <a class="nav-item" href="#">전체게시판</a>
-            <a class="nav-item" href="#">자유게시판</a>
-            <a class="nav-item" href="#">팬아트</a>
-        </div>
+        <div> <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg"></div>
         
         <!-- 현재 선택된 뉴스 네비게이션과 검색창 -->
         <div class="search-container">
-            <span class="current-nav">전체게시판</span>
+            <span class="current-nav">자유게시판</span>
             <form class="form-inline">
                 <!-- <div class="input-group"> -->
                     <!-- <div class="input-group-prepend"> -->
@@ -160,7 +143,7 @@
             <table class="table table-bordered">
                 <thead class="thead-light">
                     <tr>
-                        <th style="width: 10%;">No</th>
+                        <th style="width: 6%;">No</th>
                         <th style="width: 60%;">제목</th>
                         <th style="width: 10%;">작성자</th>
                         <th style="width: 10%;">작성일자</th>
@@ -254,11 +237,17 @@
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item"><a class="page-link" href="#">4</a></li>
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
