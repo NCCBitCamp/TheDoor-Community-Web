@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* 원하는 높이 설정 */
+            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%; /* 이미지의 너비를 100%로 설정 */
+            height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+        }
+        .head_area {
+            display: flex;
+            justify-content: center; /* 수평 가운데 정렬 */
+            align-items: center; /* 수직 가운데 정렬 */
+            background-color: white;
+            width: 100%;
+            height: 10vh;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+        .title_area{
+            margin-top: 3%;
+            color: white;
+            font-weight: bolder;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .content {
+            display: grid;
+            place-items: center;
+            background-color: black;
+            height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+        }
+        .search_area {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            margin-top: 4%;
+        }
+        .search_area input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #666666;
+            font-size: large;
+        }
+        .search_button{
+            width: 3%;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+        .board {
+            margin: 4%;
+            width: 80%;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        .board h2 {
+            text-align: center;
+        }
+        .posts {
+            list-style-type: none;
+            padding: 0;
+        }
+        .posts li {
+            background-color: #444;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .posts h3 {
+            margin: 0;
+        }
+        .post-info {
+            margin-right: 20px;
+        }
+        .post-date {
+            color: #bbb;
+        }
+        .post-buttons {
+            display: flex;
+            margin-top: 10px;
+        }
+        .post-buttons button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="guide.html">Guide</a>
+                <a href="news.html">News</a>
+                <a href="community.html">Community</a>
+                <a href="ranking.html">Ranking</a>
+                <a href="help.html">Help</a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+            </div>
+        </div>
+    </div>
+    <div class="logo_head_between_area_container">
+        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+    </div>
+    <div class="head_area">
+        <p>계정관리 문제</p>
+    </div>
+    <div class="search_area">
+        <input type="text" placeholder="검색어를 입력하세요"><button class="search_button">검색</button>
+    </div>
+    
+    <div class="content">
+        
+        <div class="board">
+            <h2></h2>
+            <ul class="posts" id="postsList">
+                <!-- 게시글이 여기에 추가됩니다 -->
+                <li>
+                    <div class="post-info">
+                        <h3>오랫동안 접속하지 않았더니 계정이 사라졌어요</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-18</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="post-info">
+                        <h3>계정 접속이 불안정 합니다라고 나옵니다</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-17</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="post-info">
+                        <h3>모르는 계정이 생겼어요!</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-17</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="post-info">
+                        <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-17</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="post-info">
+                        <h3>부계정은 몇개까지 만들 수 있을까요?</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-17</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="post-info">
+                        <h3>계정정지의 기준은 어떻게 되나요?</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-17</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="post-info">
+                        <h3>관리자 계정은 얼마인가요?</h3>
+                        <p>.............</p>
+                        <span class="post-date">2024-07-17</span>
+                    </div>
+                    <div class="post-buttons">
+                        <button>수정</button>
+                        <button>삭제</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+                <p>더 도어 게임즈가 궁금하신가요?</p>
+            </a>
+            <p>©The Door Games</p>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.semi_title').classList.add('fade-in');
+            }, 500); // 0.5초 후 페이드인
+        });
+    </script>
+</body>
+</html>
