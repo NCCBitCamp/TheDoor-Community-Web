@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .content {
+            flex-direction: column;
+            align-items: center;
+            margin: 0%;
+            /* margin-top: 0.5vh; */
+            text-align: center;
+            width: 100%;
+        }
         #extendHeaderImg {
             width: 100%;
-            height: 40vh;
-            object-fit: none;
+            height: 30vh;
+            padding: 0;
         }
         .current-nav {
             font-weight: bold;
@@ -114,7 +122,7 @@
     </div>
     <div class="content">
         <!--헤더이미지-->
-        <div> <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg"></div>
+        <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg">
         
         <!-- 현재 선택된 뉴스 네비게이션과 검색창 -->
         <div class="search-container">
