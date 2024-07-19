@@ -55,6 +55,10 @@ body, html {
 
 .content {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
 }
 
 .footer {
@@ -76,30 +80,39 @@ body, html {
 .footer .footer-content a {
     color: black;
 }
+
 .image-container {
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .image-container img {
     width: 100%;
     height: auto;
 }
+
 .link-overlay {
     position: absolute;
 }
+
 .link1 {
     top: 11.4%;
     left: 41.8%;
     width: 16.4%;
     height: 1.05%;
 }
+
 .link2 {
     top: 15.3%;
     left: 78%;
     width: 16.5%;
     height: 0.5%;
 }
+
 .link3 {
     top: 21.2%;
     left: 46%;
