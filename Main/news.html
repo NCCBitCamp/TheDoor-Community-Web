@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판</title>
+    <title>공지사항</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -11,7 +11,6 @@
             flex-direction: column;
             align-items: center;
             margin: 0%;
-            /* margin-top: 0.5vh; */
             text-align: center;
             width: 100%;
         }
@@ -35,10 +34,14 @@
             background-color: #c3ccd5;
             border-color: #000000;
         }
-        .table .thead-light th {
+        .thead th {
+            background-color: #f2f2f2;
+        }
+        .table {
             color: #000000;
-            background-color: rgb(211, 218, 226);
             border-color: #b2b2b2;
+            max-width: 1200px;
+            margin: auto;
         }
         .table a {
             color: black;
@@ -46,14 +49,10 @@
         .table a:hover {
             color: #3b3ea5;
         }
-        .table {
-            max-width: 1200px;
-            margin: auto;
-        }
         .table td, .table th {
             vertical-align: middle;
             text-align: center;
-            border-color: #b2b2b2;
+            border-color: #dddddd;
         }
         .table td.title {
             text-align: left;
@@ -65,11 +64,6 @@
             color: black;
             padding: 5px 20px;
         }
-        /* .pagination .page-item.active .page-link {
-            background-color: #28a745;
-            border-color: #28a745;
-            color: white;
-        } */
         .search-container {
             display: flex;
             justify-content: space-between;
@@ -79,7 +73,7 @@
             margin-bottom: 20px;
         }
         .search-container .current-nav {
-            margin-bottom: 0; /* 검색창과 함께 배치되므로 여백 제거 */
+            margin-bottom: 0;
         }
         .search-container .form-inline {
             display: flex;
@@ -96,35 +90,20 @@
             padding: 20px;
         }
         .btn {
-            margin: 20px
-        }
-        .news-navbar {
-            display: flex;
-            flex-wrap: nowrap;
-            text-align: center;
-            border-bottom: 1px solid black;
-            background-color: white;
-            padding: 20px 350px;
-            margin-bottom: 20px;
-            font-size: large;
-            
-        }
-        .news-navbar a {
-            text-align: center;
-            margin: 0 15px;
-            font-weight: bold;
-            color: black;
-            white-space: nowrap; /* 항목들이 줄 바꿈되지 않도록 설정 */
-        }
-        .news-navbar a:hover {
-            color: #3b3ea5;
+            margin: 20px;
         }
         .current-nav {
             font-weight: bold;
             color: #000000;
         }
-    
-        
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .card {
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -150,125 +129,105 @@
     <div class="content">
         <!--헤더이미지-->
         <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg">
-        <!-- 뉴스 네비게이션 바 -->
-        <div class="news-navbar">
-            <a class="nav-item" href="#">전체공지</a>
-            <a class="nav-item" href="#">공지사항</a>
-            <a class="nav-item" href="#">업데이트</a>
-        </div>
-        
+                
         <!-- 현재 선택된 뉴스 네비게이션과 검색창 -->
         <div class="search-container">
             <span class="current-nav">전체공지</span>
             <form class="form-inline">
-                <!-- <div class="input-group"> -->
-                    <!-- <div class="input-group-prepend"> -->
-                    <div>
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">제목</button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">제목</a></li>
-                            <li><a class="dropdown-item" href="#">작성자</a></li>
-                        </ul>
-                    </div>
-                    <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
-                    </div>
-                <!-- </div> -->
+                <div>
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">제목</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">제목</a></li>
+                        <li><a class="dropdown-item" href="#">작성자</a></li>
+                    </ul>
+                </div>
+                <input class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+                </div>
             </form>
         </div>
     
-    
         <!-- 게시글 목록 테이블 -->
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-light">
-                    <tr>
-                        <th style="width: 6%;">No</th>
-                        <th style="width: 60%;">제목</th>
-                        <th style="width: 10%;">작성자</th>
-                        <th style="width: 10%;">작성일자</th>
-                        <th style="width: 10%;">조회수</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="title"><a href="post1.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="title"><a href="post2.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td class="title"><a href="post3.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td class="title"><a href="post4.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td class="title"><a href="post5.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td class="title"><a href="post6.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td class="title"><a href="post7.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td class="title"><a href="post8.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td class="title"><a href="post9.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td class="title"><a href="post10.html">게시물 제목</a></td>
-                        <td>작성자</td>
-                        <td>2022.01.01</td>
-                        <td>100</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- <div class="post-container">
-                <button type="button" class="btn btn-outline-secondary" onclick="location.href='post.html'">글 등록</button>
-            </div> -->
-            
+        <div class="container mt-3 mb-5 w-75 card-wrapper">
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+                <div class="card-body">
+                      <h5 class="card-title">공지사항</h5>
+                      <p class="card-text">작성일: yyyy-MM-dd</p>
+                      <a href="newsDetail.html" class="btn btn-outline-secondary btn-sm">자세히 보기</a>
+                </div>
+            </div>
         </div>
+
+        <div class="post-container" id="postContainer">
+            <button type="button" class="btn btn-outline-secondary" onclick="location.href='newsWrite.html'">공지사항 등록</button>
+        </div>
+
         <br>
             <!-- 페이지네이션 -->
             <nav aria-label="Page navigation">
@@ -296,7 +255,6 @@
                 </ul>
             </nav>
         
-
         <div class="footer">
             <div class="footer-content">
                 <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
@@ -310,14 +268,12 @@
     <!-- JavaScript 추가 -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const navItems = document.querySelectorAll('.news-navbar .nav-item');
-            const currentNav = document.querySelector('.current-nav span');
+            const isAdmin = true; // 관리자 여부를 확인하는 변수 (예: 서버에서 받아온 값으로 설정)
+            const postContainer = document.getElementById('postContainer');
 
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    currentNav.textContent = this.textContent;
-                });
-            });
+            if (!isAdmin) {
+                postContainer.style.display = 'none';
+            }
         });
     </script>
 
