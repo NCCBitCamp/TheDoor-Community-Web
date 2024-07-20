@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판</title>
+    <title>자유게시판</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -23,8 +23,8 @@
         .current-nav {
             font-weight: bold;
             color: #000000;
-            padding: 25px;
-            font-size: large;
+            padding: 28px;
+            font-size: x-large;
         }
         .btn-outline-success {
             color: #000000;
@@ -35,10 +35,19 @@
             background-color: #c3ccd5;
             border-color: #000000;
         }
-        .table .thead-light th {
-            color: #000000;
-            background-color: rgb(211, 218, 226);
+        .thead th {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+    }
+        .table {
+            color: #333;
             border-color: #b2b2b2;
+            max-width: 1200px;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
         }
         .table a {
             color: black;
@@ -46,14 +55,10 @@
         .table a:hover {
             color: #3b3ea5;
         }
-        .table {
-            max-width: 1200px;
-            margin: auto;
-        }
         .table td, .table th {
             vertical-align: middle;
             text-align: center;
-            border-color: #b2b2b2;
+            border-color: #dddddd;
         }
         .table td.title {
             text-align: left;
@@ -149,7 +154,7 @@
         <!-- 게시글 목록 테이블 -->
         <div class="table-responsive">
             <table class="table table-bordered">
-                <thead class="thead-light">
+                <thead class="thead">
                     <tr>
                         <th style="width: 6%;">No</th>
                         <th style="width: 60%;">제목</th>
@@ -161,70 +166,70 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td class="title"><a href="post1.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td class="title"><a href="post2.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td class="title"><a href="post3.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td class="title"><a href="post4.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetailhtml">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td class="title"><a href="post5.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td class="title"><a href="post6.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>7</td>
-                        <td class="title"><a href="post7.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td class="title"><a href="post8.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>9</td>
-                        <td class="title"><a href="post9.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>10</td>
-                        <td class="title"><a href="post10.html">게시물 제목</a></td>
+                        <td class="title"><a href="communityDetail.html">게시물 제목</a></td>
                         <td>작성자</td>
                         <td>2022.01.01</td>
                         <td>100</td>
