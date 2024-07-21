@@ -24,9 +24,12 @@
             align-items: center; /* 수직 가운데 정렬 */
             background-color: white;
             width: 100%;
-            height: 10vh;
+            height: 20vh;
             font-size: x-large;
             font-weight: bolder;
+        }
+        .head_area_title{
+            margin-top: 20vh;
         }
         .content{
             background-color: black;
@@ -38,8 +41,9 @@
         .semi_title{
             color: white;
             font-weight: bolder;
-            font-size: xx-large;
+            font-size: x-large;
             text-align: center;
+            margin-top: 30px;
         }
         .commentbox1{
             color: black;
@@ -116,30 +120,30 @@
             display: inline-block;
             color: black;
             margin: 20px;
-            width: 4vw;
-            height: 2vh;
+            width: 8vw;
+            height: 4vh;
             background-color: white;
             opacity: 75%;
             text-align: center;
             transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
             border-radius: 3%;
             font-weight: bolder;
-            font-size: xx-small;
+            /*font-size: small;*/
             text-align: center;
         }
         .qna_button{
             display: inline-block;
             color: black;
             margin: 20px;
-            width: 4vw;
-            height: 2vh;
+            width: 8vw;
+            height: 4vh;
             background-color: white;
             opacity: 75%;
             text-align: center;
             transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
             border-radius: 3%;
             font-weight: bolder;
-            font-size: xx-small;
+            /*font-size: small;*/
             text-align: center;
         }
         .faq_button:hover,
@@ -172,7 +176,7 @@
         <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
     </div>
     <div class="head_area">
-        <p>FAQ</p>
+       <p class="head_area_title">FAQ</p>
     </div>
     <div class="content">
         <div class="semi_title">
@@ -183,7 +187,7 @@
         <div class="commentbox3"></div>
         <div class="button_area">
             <div class="faq_button"><a href="helpFaQ.html">FAQ 바로가기</a></div>
-            <div class="qna_button">QnA 바로가기</div>
+            <div class="qna_button"><a href="helpQnA.html">QnA 바로가기</a></div>
         </div>
     </div>    
     <div class="footer">
