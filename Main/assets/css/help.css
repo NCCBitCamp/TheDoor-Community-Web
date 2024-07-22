@@ -1,0 +1,157 @@
+.logo_head_between_area_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* 원하는 높이 설정 */
+    width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
+    background-color: white;
+}
+.logo_head_between_area {
+    width: 100%; /* 이미지의 너비를 100%로 설정 */
+    height: auto; /* 이미지의 높이를 자동으로 설정하여 비율을 유지 */
+}
+.head_area {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    background-color: white;
+    width: 100%;
+    height: 10vh;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.head_area_title{
+    margin-top: 8vh;
+}
+.content{
+    background-color: black;
+    background-image: url('../images/center_professor.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.semi_title{
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.commentbox1{
+    color: black;
+    opacity: 0; /* 초기 상태에서 보이지 않게 설정 */
+    width: 20vw;
+    height: 8vh;
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+    border-radius: 2%;
+}
+.commentbox2{
+    color: black;
+    opacity: 0; /* 초기 상태에서 보이지 않게 설정 */
+    width: 20vw;
+    height: 8vh;
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+    border-radius: 2%;
+}
+.commentbox3{
+    color: black;
+    opacity: 0; /* 초기 상태에서 보이지 않게 설정 */
+    width: 20vw;
+    height: 8vh;
+    margin-top: 50px;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+    border-radius: 2%;
+}
+.commentbox1:hover,
+.commentbox2:hover,
+.commentbox3:hover{
+    transform: scale(1.1); /* 이미지 확대 비율 */
+}
+.fade-in {
+    animation: fadeIn 1s forwards; /* 페이드인 애니메이션 추가 */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+.commentbox1:hover, .commentbox2:hover, .commentbox3:hover {
+    transform: scale(1.1); /* 이미지 확대 비율 */
+}
+.button_area{
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.faq_button a, .qna_button a {
+    text-decoration: none;
+    color: black;
+}
+
+.faq_button{
+    display: inline-block;
+    color: black;
+    margin: 20px;
+    width: 8vw;
+    height: 4vh;
+    background-color: white;
+    opacity: 75%;
+    text-align: center;
+    transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+    border-radius: 3%;
+    font-weight: bolder;
+    /*font-size: small;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.qna_button{
+    display: inline-block;
+    color: black;
+    margin: 20px;
+    width: 8vw;
+    height: 4vh;
+    background-color: white;
+    opacity: 75%;
+    text-align: center;
+    transition: transform 0.3s ease; /* 이미지 확대 전환을 부드럽게 함 */
+    border-radius: 3%;
+    font-weight: bolder;
+    /*font-size: small;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.faq_button:hover,
+.qna_button:hover {
+    transform: scale(1.1); /* 이미지 확대 비율 */
+}
