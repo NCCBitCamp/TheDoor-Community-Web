@@ -52,13 +52,19 @@
             text-align: center;
         }
         .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            padding: 20px;
-            box-sizing: border-box;
-            flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+        flex-direction: column;
+        background-color: black;
+        }
+        .content-top-gap,
+        .content-bottom-gap {
+            background-color: black;
+            height: 20vh; /* 원하는 높이 설정 */
         }
         .post-container {
             background-color: #333;
@@ -172,6 +178,7 @@
 <div class="head_area">
     <p class="head_area_title"></p>
 </div>
+<div class="content-top-gap"></div> <!-- 상단 여백 -->
 <div class="content">
     <div class="post-container">
         <div class="post-title">
@@ -215,6 +222,7 @@
         </div>
     </div>
 </div>
+<div class="content-bottom-gap"></div> <!-- 하단 여백 -->
 <div class="footer">
     <div class="footer-content">
         <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
