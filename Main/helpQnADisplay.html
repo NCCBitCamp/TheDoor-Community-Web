@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            /* Your existing navbar styles */
+        }
+        .logo_head_between_area_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            width: 100%;
+            background-color: white;
+        }
+        .logo_head_between_area {
+            width: 100%;
+            height: auto;
+        }
+        .head_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            width: 100%;
+            height: 10vh; /* Adjusted height to make it more visible */
+            font-size: xx-large;
+            font-weight: bolder;
+            margin-top: 20px; /* Added margin to make it more visible */
+        }
+        .head_area_title {
+            margin-top: 0; /* Reset margin for better alignment */
+        }
+        .title_area {
+            margin-top: 3%;
+            color: white;
+            font-weight: bolder;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+        }
+        .post-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+            margin: 20px;
+        }
+        .post-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .post-header div {
+            flex: 1;
+        }
+        .post-header label {
+            font-size: x-small; /* Make label text very small */
+        }
+        .post-header p {
+            font-size: x-small; /* Make paragraph text very small */
+        }
+        .post-title {
+            font-size: large; /* Larger font for the title */
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+        }
+        .post-content {
+            word-spacing: 1px;
+            line-height: 2rem;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        .post-group {
+            margin-bottom: 15px;
+        }
+        .post-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: x-small; /* Make label text very small */
+        }
+        .post-group p {
+            margin: 0;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            font-size: x-small; /* Make paragraph text very small */
+            box-sizing: border-box;
+        }
+        .post-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .post-buttons button {
+            padding: 5px 10px; /* Smaller padding for a smaller button */
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            font-size: small; /* Smaller font size for the button */
+            margin-left: 10px;
+        }
+        .footer {
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="Logo">
+        </a>
+    </div>
+    <div class="nav-container">
+        <div class="nav-links">
+            <a href="guide.html">Guide</a>
+            <a href="news.html">News</a>
+            <a href="community.html">Community</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="help.html">Help</a>
+        </div>
+        <div class="auth-links">
+            <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
+        </div>
+    </div>
+</div>
+<div class="logo_head_between_area_container">
+    <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
+</div>
+<div class="head_area">
+    <p class="head_area_title"></p>
+</div>
+<div class="content">
+    <div class="post-container">
+        <div class="post-title">
+            마태림을 고발합니다
+        </div>
+        <div class="post-header">
+            <div class="post-group">
+                <label for="author">작성자</label>
+                <p id="author">용감한시민</p>
+            </div>
+            <div class="post-group">
+                <label for="created_date">작성 날짜</label>
+                <p id="created_date">2024-07-22</p>
+            </div>
+            <div class="post-group">
+                <label for="modified_date">수정된 날짜</label>
+                <p id="modified_date">2024-07-22</p>
+            </div>
+            <div class="post-group">
+                <label for="answered">답변 완료 여부</label>
+                <p id="answered">X</p>
+            </div>
+        </div>
+        <div class="post-group">
+            <label for="content">내용</label>
+            <div id="content" class="post-content">
+                2022.07.21 마태림은 정보처리산업기사 필기 시험을 광운공고에서 치루었다.
+                <br>이 시험을 위해서 금요일을 희생하여 이틀동안 불 같은 벼락치기를 한 결과 PASS를 받을 수 있었다.
+                <br>하지만 그 과정에서 프로젝트 안하고 팀을 버렸다는 비판을 피할 수는 없게 되었다.
+                <br>이에 마태림을 규탄하는 성명을 내려고 하는데 ㄱㅊ?
+                <br>아 배고파
+                
+            </div>
+        </div>
+        <div class="post-group">
+            <label for="attachment">첨부된 파일</label>
+            <p id="attachment" style="margin-top: 10px;"><a href="#">첨부파일 예시</a></p>
+        </div>
+        <div class="post-buttons">
+            <button type="button" onclick="window.history.back();">뒤로가기</button>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-content">
+        <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+            <p>더 도어 게임즈가 궁금하신가요?</p>
+        </a>
+        <p>©The Door Games</p>
+    </div>
+</div>
+</body>
+</html>
