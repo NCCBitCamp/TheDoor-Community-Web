@@ -6,13 +6,19 @@
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <style>
-        .logo_head_between_area_container {
+        body {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 10vh; /* 원하는 높이 설정 */
-            width: 100%; /* 부모 요소가 화면 너비를 가득 채우도록 설정 */
-            background-color: white;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            /* Your existing navbar styles */
+        }
+        #extendHeaderImg {
+            width: 100%;
+            height: 30vh;
+            padding: 0;
         }
         .logo_head_between_area {
             width: 100%; /* 이미지의 너비를 100%로 설정 */
@@ -22,13 +28,16 @@
             display: flex;
             justify-content: center; /* 수평 가운데 정렬 */
             align-items: center; /* 수직 가운데 정렬 */
-            background-color: white;
+            background-color: transparent;
             width: 100%;
-            height: 10vh;
+            height: 4vh;
             font-size: xx-large;
             font-weight: bolder;
         }
-        .title_area{
+        .head_area_title {
+            margin-top: 33vh;
+        }
+        .title_area {
             margin-top: 3%;
             color: white;
             font-weight: bolder;
@@ -36,36 +45,41 @@
             text-align: center;
         }
         .content {
-            display: grid;
-            place-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: black;
-            height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+            flex: 1; /* flex-grow로 content가 남은 공간을 채우도록 설정 */
+            padding: 20px;
+            box-sizing: border-box; /* 패딩을 포함하여 크기를 계산 */
+            flex-direction: column; /* Flexbox로 수직 배치 */
         }
         .search_area {
             display: flex;
-            justify-content: center;
+            justify-content: right;
             margin: 20px 0;
-            margin-top: 4%;
+            margin-top: 6%;
         }
         .search_area input {
-            width: 80%;
+            width: 20%;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #666666;
             font-size: large;
+            margin-right: 10px;
         }
-        .search_button{
+        .search_button {
             width: 3%;
-            margin-left: 8px;
+            margin-right: 15px;
             font-weight: bold;
         }
         .board {
-            margin: 4%;
-            width: 80%;
+            width: 100%;
             background-color: #333;
             padding: 20px;
             border-radius: 10px;
             color: white;
+            box-sizing: border-box; /* 패딩을 포함하여 크기를 계산 */
         }
         .board h2 {
             text-align: center;
@@ -102,143 +116,161 @@
             color: white;
             cursor: pointer;
         }
-        
-        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: 1px solid white;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        .pagination a:hover {
+            background-color: #666;
+        }
+        .footer {
+            background-color: white;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/images/logo.png" alt="Logo">
-            </a>
+<div class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="Logo">
+        </a>
+    </div>
+    <div class="nav-container">
+        <div class="nav-links">
+            <a href="guide.html">Guide</a>
+            <a href="news.html">News</a>
+            <a href="community.html">Community</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="help.html">Help</a>
         </div>
-        <div class="nav-container">
-            <div class="nav-links">
-                <a href="guide.html">Guide</a>
-                <a href="news.html">News</a>
-                <a href="community.html">Community</a>
-                <a href="ranking.html">Ranking</a>
-                <a href="help.html">Help</a>
-            </div>
-            <div class="auth-links">
-                <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
-            </div>
-        </div>
-    </div>
-    <div class="logo_head_between_area_container">
-        <img src="assets/images/doors_title_header.png" class="logo_head_between_area" alt="Title Header">
-    </div>
-    <div class="head_area">
-        <p>계정관리 문제</p>
-    </div>
-    <div class="search_area">
-        <input type="text" placeholder="검색어를 입력하세요"><button class="search_button">검색</button>
-    </div>
-    
-    <div class="content">
-        
-        <div class="board">
-            <h2></h2>
-            <ul class="posts" id="postsList">
-                <!-- 게시글이 여기에 추가됩니다 -->
-                <li>
-                    <div class="post-info">
-                        <h3>오랫동안 접속하지 않았더니 계정이 사라졌어요</h3>
-                        <p>다시 만드세요</p>
-                        <span class="post-date">2024-07-18</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="post-info">
-                        <h3>제 계정이 중고거래 사이트에 올라갔는데 회수 가능할까요?</h3>
-                        <p>될가요?</p>
-                        <span class="post-date">2024-07-17</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="post-info">
-                        <h3>모르는 계정이 생겼어요!</h3>
-                        <p>ㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋ</p>
-                        <span class="post-date">2024-07-17</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="post-info">
-                        <h3>계정을 돈으로 주고 살 수 있나요?</h3>
-                        <p>어디계신가요? 바로 가겠습니다</p>
-                        <span class="post-date">2024-07-17</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="post-info">
-                        <h3>부계정은 몇개까지 만들 수 있을까요?</h3>
-                        <p>양심껏?</p>
-                        <span class="post-date">2024-07-17</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="post-info">
-                        <h3>계정정지의 기준은 어떻게 되나요?</h3>
-                        <p>무슨 짓을 저지르신겁니까?</p>
-                        <span class="post-date">2024-07-17</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="post-info">
-                        <h3>관리자 계정은 얼마인가요?</h3>
-                        <p>3억</p>
-                        <span class="post-date">2024-07-17</span>
-                    </div>
-                    <div class="post-buttons">
-                        <button>수정</button>
-                        <button>삭제</button>
-                    </div>
-                </li>
-            </ul>
+        <div class="auth-links">
+            <a href="login.html">로그인</a> / <a href="join.html">회원가입</a>
         </div>
     </div>
-
-    <div class="footer">
-        <div class="footer-content">
-            <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
-                <p>더 도어 게임즈가 궁금하신가요?</p>
-            </a>
-            <p>©The Door Games</p>
-        </div>
+</div>
+<div class="logo_head_between_area_container">
+    <img src="assets/images/extendHeaderImg.png" alt="theDoor" id="extendHeaderImg">
+</div>
+<div class="head_area">
+    <p class="head_area_title">계정관리 문제</p>
+</div>
+<div class="search_area">
+    <input type="text" placeholder="검색어를 입력하세요"><button class="search_button">검색</button>
+</div>
+<div class="content">
+    <div class="board">
+        <h2></h2>
+        <ul class="posts" id="postsList">
+            <!-- 게시글이 여기에 추가됩니다 -->
+            <li>
+                <div class="post-info">
+                    <h3>오랫동안 접속하지 않았더니 계정이 사라졌어요</h3>
+                    <p>다시 만드세요</p>
+                    <span class="post-date">2024-07-18</span>
+                </div>
+                <div class="post-buttons">
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </li>
+            <li>
+                <div class="post-info">
+                    <h3>제 계정이 중고거래 사이트에 올라갔는데 회수 가능할까요?</h3>
+                    <p>될가요?</p>
+                    <span class="post-date">2024-07-17</span>
+                </div>
+                <div class="post-buttons">
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </li>
+            <li>
+                <div class="post-info">
+                    <h3>모르는 계정이 생겼어요!</h3>
+                    <p>ㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋ</p>
+                    <span class="post-date">2024-07-17</span>
+                </div>
+                <div class="post-buttons">
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </li>
+            <li>
+                <div class="post-info">
+                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                    <p>어디계신가요? 바로 가겠습니다</p>
+                    <span class="post-date">2024-07-17</span>
+                </div>
+                <div class="post-buttons">
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </li>
+            <li>
+                <div class="post-info">
+                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                    <p>어디계신가요? 바로 가겠습니다</p>
+                    <span class="post-date">2024-07-17</span>
+                </div>
+                <div class="post-buttons">
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </li>
+            <li>
+                <div class="post-info">
+                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                    <p>어디계신가요? 바로 가겠습니다</p>
+                    <span class="post-date">2024-07-17</span>
+                </div>
+                <div class="post-buttons">
+                    <button>수정</button>
+                    <button>삭제</button>
+                </div>
+            </li>
+        </ul>
     </div>
-
-
-    <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.querySelector('.semi_title').classList.add('fade-in');
-            }, 500); // 0.5초 후 페이드인
-        });
-    </script>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-content">
+        <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
+            <p>더 도어 게임즈가 궁금하신가요?</p>
+        </a>
+        <p>©The Door Games</p>
+    </div>
+</div>
+<script>
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.querySelector('.semi_title').classList.add('fade-in');
+        }, 500); // 0.5초 후 페이드인
+    });
+</script>
 </body>
 </html>

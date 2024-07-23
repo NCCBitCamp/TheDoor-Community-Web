@@ -5,11 +5,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    /* background-image: url(/Main/assets/images/loginBackground.png); */
+    background-image: url(/Main/assets/images/loginBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .form-list {
@@ -22,7 +21,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     /* box-shadow: 0px 4px 4px 0px;  */
 }
 
@@ -61,23 +59,9 @@
     height: 30px;
 }
 
-.input:focus {
-    /* outline: 2px solid #d50000; */
-    /* outline: none; */
-}
-
 #divId {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
+    display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
 }
 
 #divPw1::before{
@@ -89,20 +73,6 @@
     height: 30px;
 }
 
-#divPw1 {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
-}
-
 #divPw2::before{
     content: "";
     background-image: url(/Main/assets/images/join/pw1.png);
@@ -110,21 +80,6 @@
     background-repeat: no-repeat;
     width: 34px;
     height: 30px;
-}
-
-#divPw2 {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
-
 }
 
 #divNickname::before {
@@ -136,21 +91,6 @@
     height: 30px;
 }
 
-#divNickname {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
-
-}
-
 #divEmail::before {
     content: "";
     background-image: url(/Main/assets/images/join/email.png);
@@ -158,21 +98,6 @@
     background-repeat: no-repeat;
     width: 34px;
     height: 30px;
-}
-
-#divEmail {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
-
 }
 
 #divName::before {
@@ -184,20 +109,6 @@
     height: 30px;
 }
 
-#divName {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
-}
-
 #divBirthday::before {
     content: "";
     background-image: url(/Main/assets/images/join/birthday.png);
@@ -207,27 +118,13 @@
     height: 30px;
 }
 
-#divBirthday {
-    /* width: 390px;
-    height: 56px;
-    background-color: #272727;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 0px;
-    outline: none;
-    display: flex; */
-}
-
 /* --------- */
 /* input 태그 */
 /* --------- */
 .input {
     background-color: transparent;
     border: transparent;
-    flex: 1 1 auto;
+    flex: 1;
     /* border: none; */
     outline: 0;
     margin: 0;
@@ -235,4 +132,14 @@
     line-height: 22px;
     padding: 0px 10px 0px 10px;
     color: #d1d1d1;
+}
+
+.check-btn {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
 }

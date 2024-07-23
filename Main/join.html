@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="/Main/assets/css/join_style.css">
+    <link rel="stylesheet" href="/Main/assets/css/join.css">
 </head>
 
 <body>
@@ -31,47 +31,48 @@
     </div>
     <div class="content">
         <div class="form-list">
-            <!--이곳에 컨텐츠를 채워주세요-->
+            <form action="submit_form.php" method="post">
+                <!-- 아이디 -->
+                <div class="divError" id="divId">
+                    <input type="text" id="id" name="id" placeholder="아이디" class="input" maxlength="20" autocapitalize="off" autocomplete='off'>
+                    <button type="button" class="check-btn">중복확인</button>
+                </div>
 
-            <!-- 아이디 -->
-            <div class="divError" id="divId">
-                <input type="text" id="id" name="id" placeholder="아이디" class="input" value maxlength="20"
-                    autocapitalize="off" autocomplete='off'>
-            </div>
+                <!-- 비밀번호 -->
+                <div class="divError" id="divPw1">
+                    <input type="password" id="pw1" name="pw1" placeholder="비밀번호" class="input" maxlength="20" autocomplete="new-password" aria-autocomplete="list" autocomplete='off'>
+                </div>
 
-            <!-- 비밀번호 -->
-            <div class="divError" id="divPw1">
-                <input type="password" id="pw1" name="pw1" placeholder="비밀번호" class="input" value maxlength="20"
-                    autocomplete="new-password" aria-autocomplete="list" autocomplete='off'>
-            </div>
+                <!-- 비밀번호 확인 -->
+                <div class="divError" id="divPw2">
+                    <input type="password" id="pw2" name="pw2" placeholder="비밀번호 확인" class="input" maxlength="20" autocomplete="new-password" aria-autocomplete="list" autocomplete='off'>
+                </div>
 
-            <!-- 비밀번호 확인 -->
-            <div class="divError" id="divPw2">
-                <input type="password" id="pw2" name="pw2" placeholder="비밀번호 확인" class="input" value maxlength="20"
-                    autocomplete="new-password" aria-autocomplete="list" autocomplete='off'>
-            </div>
+                <!-- 닉네임 -->
+                <div class="divError" id="divNickname">
+                    <input type="text" id="nickname" name="nickname" placeholder="닉네임" class="input" maxlength="15" autocomplete='off'>
+                </div>
 
-            <!-- 닉네임 -->
-            <div class="divError" id="divNickname">
-                <input type="text" id="nickname" name="nickname" placeholder="닉네임" class="input" value maxlength="15" autocomplete='off'>
-            </div>
+                <!-- 이메일 -->
+                <div class="divError" id="divEmail">
+                    <input type="email" id="email" name="email" placeholder="이메일주소" class="input" maxlength="100" autocomplete='off'>
+                </div>
 
-            <!-- 이메일 -->
-            <div class="divError" id="divEmail">
-                <input type="email" id="email" name="email" placeholder="이메일주소" class="input" value maxlength="100" autocomplete='off'>
-            </div>
+                <!-- 이름 -->
+                <div class="divError" id="divName">
+                    <input type="text" id="name" name="name" placeholder="이름" class="input" maxlength="40" autocomplete='off'>
+                </div>
 
-            <!-- 이름 -->
-            <div class="divError" id="divName">
-                <input type="text" id="name" name="name" placeholder="이름" class="input" value maxlength="40" autocomplete='off'>
-            </div>
+                <!-- 생년월일 -->
+                <div class="divError" id="divBirthday">
+                    <input type="text" id="birthdayInput" name="birthday" placeholder="생년월일 8자리" class="input" maxlength="10" autocomplete='off'>
+                </div>
 
-            <!-- 생년월일 -->
-            <div class="divError" id="divBirthday">
-                <input type="text" id="birthdayInput" placeholder="생년월일 8자리" class="input" value maxlength="10" autocomplete='off'>
-            </div>
-
-
+                <!-- 가입 완료 버튼 -->
+                <div class="divError" id="divSubmit">
+                    <button type="submit" class="input">가입 완료</button>
+                </div>
+            </form>
         </div>
     </div>
     <div class="footer">
@@ -82,26 +83,6 @@
             <p>©The Door Games</p>
         </div>
     </div>
-   
-    <script>
-
-        // 클릭시 테투리 변하는 것 적용
-        const inputClass = document.querySelectorAll('.input');
-        const divClass = document.querySelectorAll(".divError");
-
-        inputClass.forEach(input => {
-            input.addEventListener('click', () => {
-                boom();
-            });
-        });
-
-        function boom() {
-            divClass.forEach(effect => {
-                effect.style.border = "2px solid ";
-            });
-        }
-      
-    </script>
 </body>
 
 </html>
