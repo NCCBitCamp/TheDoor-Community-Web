@@ -32,6 +32,17 @@
             font-weight: bolder;
             font-size: xx-large;
             text-align: center;
+            animation: slideIn 2.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .content {
             display: grid;
