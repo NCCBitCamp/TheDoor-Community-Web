@@ -45,6 +45,17 @@
             font-size: x-large;
             text-align: center;
             margin: 20px; /* 상하좌우 여백 추가 */
+            animation: slideIn 2.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .commentbox1, .commentbox2, .commentbox3 {
             color: black;
@@ -85,7 +96,7 @@
             justify-content: center; /* 수평 가운데 정렬 */
             align-items: center; /* 수직 가운데 정렬 */
             color: black;
-            margin: 20px;
+            margin: 40px;
             width: 8vw;
             height: 4vh;
             background-color: white;
@@ -134,6 +145,7 @@
         <div class="commentbox1"></div>
         <div class="commentbox2"></div>
         <div class="commentbox3"></div>
+        <!--이 코멘트 박스들에는 조회수가 가장 높은 FaQ 3개를 올려주는 기능-->
         <div class="button_area">
             <div class="faq_button"><a href="helpFaQ.html">FAQ 바로가기</a></div>
             <div class="qna_button"><a href="helpQnA.html">QnA 바로가기</a></div>
