@@ -33,13 +33,13 @@
             align-items: center;
             background-color: transparent;
             width: 100%;
-            height: 10vh; /* Adjusted height to make it more visible */
+            height: 10vh;
             font-size: xx-large;
             font-weight: bolder;
-            margin-top: 20px; /* Added margin to make it more visible */
+            margin-top: 20px;
         }
         .head_area_title {
-            margin-top: 0; /* Reset margin for better alignment */
+            margin-top: 0;
         }
         .title_area {
             margin-top: 3%;
@@ -74,16 +74,18 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #666;
             font-size: large;
             box-sizing: border-box;
+            background-color: #444;
+            color: white;
         }
         .form-group textarea {
-            height: 300px; /* Increased height for content input */
+            height: 300px;
         }
         .form-group input[type="checkbox"] {
             width: auto;
@@ -143,9 +145,19 @@
 </div>
 <div class="content">
     <div class="form-container">
-        <div class="form-group">
-            <label for="author">작성자</label>
-            <input type="text" id="author" name="author">
+        <div class="form-group" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 10px;">
+                <label for="author">작성자</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div style="flex: 1; margin-left: 10px;">
+                <label for="topic" >주제 선택</label>
+                <select id="topic" name="topic" style="font-size: small;">
+                    <option value="account" style="font-size: small;">계정문제</option>
+                    <option value="payment" style="font-size: small;">결제문제</option>
+                    <option value="other" style="font-size: small;">기타</option>
+                </select>
+            </div>
         </div>
         <div class="form-group">
             <label for="title">제목</label>
@@ -170,7 +182,7 @@
         </div>
         <div class="form-buttons">
             <button type="submit">작성완료</button>
-            <button type="button" onclick="window.history.back();">작성취소</button>
+            <a href="helpQnA.html"><button type="button" onclick="window.history.back();">작성취소</button></a>
         </div>
     </div>
 </div>
