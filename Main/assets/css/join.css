@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
 }
 
 .form-list {
@@ -21,7 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* box-shadow: 0px 4px 4px 0px;  */
+    box-shadow: 0px 5px 5px 0px; 
 }
 
 .divError {
@@ -29,7 +30,7 @@
     /* border: 2px solid; */
     border-radius: 10px;
     /* border-color: #d1d1d1; */
-    border-color: red;
+    border-color: #fbc70e;
     padding: 0px 10px 0px 10px;
     width: 390px;
     height: 56px;
@@ -42,6 +43,11 @@
     /* outline: none; */
 }
 
+#divSubmitBtn {
+    color: #272727;
+    font-weight: bold;
+    cursor: pointer;
+}
 #divSubmit {
     border-radius: 10px;
     padding: 0px 10px 0px 10px;
@@ -49,7 +55,7 @@
     height: 36px;
     margin-top: 1ch;
     margin-bottom: 1ch;
-    background-color: #272727;
+    background-color: #FBC70E;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -57,13 +63,12 @@
     /* outline: none; */
     cursor: pointer;
 }
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* 여기서부터 시작하면 됌@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
 .divMsg {
     padding: 0px 5px 5px 10px;
     margin-top: 1ch;
     margin-bottom: 2px;
-    color: red;
+    color: #FBC70E;
     font-size: 1.4ch;
     width: 390px;
     height: 15px;
@@ -83,6 +88,16 @@
 }
 #divId {
     margin-top: 1.4ch;
+}
+
+#eyeBtn {
+    width: 31px;
+    height: 24px;
+    background-image: url(/Main/assets/images/join/비밀번호숨김.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    cursor: pointer;
 }
 /*=============*/
 /* div 개별 값 */
@@ -183,5 +198,5 @@
 }
 
 .errorPlaceholder::placeholder {
-    color: red;
+    color: #FBC70E;
 }

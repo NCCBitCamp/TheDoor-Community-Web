@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="/Main/assets/css/login.css">
 </head>
+
 <body>
     <div class="navbar">
         <div class="logo">
@@ -29,48 +31,73 @@
     </div>
     <div class="content">
 
+            <!--이곳에 컨텐츠를 채워주세요-->
+            <h1>LOGIN</h1>
+            <div id="loginBox">
+                <div class="inputBox">
+                    <label id="idLabel" for="username" style="color:#FFF;">아이디</label>
+                    <input type="text" class="id" id="username" name="username" required maxlength="30" autocomplete="off">
+                </div>
 
-        <!--이곳에 컨텐츠를 채워주세요-->
-        <h1>LOGIN</h1>
-        <div id="loginBox">
-            <div class="inputBox">
-                <label id="idLabel" for="username" style="color:#FFF;">아이디</label>
-                <input type="text" class="id" id="username" name="username" required maxlength="30">
+                <div class="inputBox">
+                    <label id="pwLabel" style="color:#FFF;">비밀번호</label>
+                    <input type="password" class="password" id="password" name="password" required maxlength="30">
+                    <div id="pwBtn">　</div>
+                    <label id=pwFind style="color: #898686;">로그인에 어려움이 있나요?</label>
+                </div>
+
+
+                <div class="login">
+                    <button type="submit" class="loginbtn">로그인</button>
+                </div>
+
             </div>
 
-            <div class="inputBox">
-                <label id="pwLabel" style="color:#FFF;">비밀번호</label>
-                <input type="password" class="password" id="password" name="password" required maxlength="30">
-                <div id="pwBtn">　</div>
-                <label id=pwFind style="color: #898686;">로그인에 어려움이 있나요?</label>
+            <div class="createAccBox">
+                <button type="submit" class="createBtn" style="color: white;" href="join.html">회원가입</button>
             </div>
-
-
-            <div class="login">
-                <button type="submit" class="loginbtn">로그인</button>
-            </div>
-          
-        </div>
-
-        <div class="createAccBox">
-            <button type="submit" class="createBtn" style="color: white;">회원가입</button>
-        </div>
-       
-        <!--이곳에 컨텐츠를 채워주세요-->
-
 
     </div>
     <div class="footer">
         <div class="footer-content">
             <a href="https://general-pet-cfa.notion.site/2-76644680bfca465e854f0e78a85e3630?pvs=4">
-            <p>더 도어 게임즈가 궁금하신가요?</p>
+                <p>더 도어 게임즈가 궁금하신가요?</p>
             </a>
             <p>©The Door Games</p>
         </div>
     </div>
     <script>
- 
+        const eyeBtn = document.querySelector('#pwBtn');
+        const pwInput = document.querySelector('#password');
+        const backImage = document.querySelector('.content');
+        const loginColor = document.querySelector('.loginbtn');
+        const loginBox = document.querySelector('#loginBox');
+        const createBox = document.querySelector('.createBtn');
 
+        let eyeKey = false;
+
+        eyeBtn.addEventListener('click', (e) => {
+            if (!eyeKey) {
+                pwInput.type = 'text';
+                eyeBtn.style.backgroundImage = 'url("/Main/assets/images/join/비밀번호표시.png")';
+                backImage.style.backgroundImage = 'url("/Main/assets/images/loginBackground2.png")';
+                // loginColor.style.backgroundColor = '#6e5f25';
+                loginBox.style.boxShadow = '0px 0px 0px 0px';
+                createBox.style.boxShadow = '0px 0px 0px 0px black';
+                eyeKey = true;
+
+            } else {
+                pwInput.type = 'password';
+                eyeBtn.style.backgroundImage = "url('/Main/assets/images/join/비밀번호숨김.png')";
+                backImage.style.backgroundImage = 'url("/Main/assets/images/loginBackground.png")';
+                // loginColor.style.backgroundColor = '#FBC70E';
+                loginBox.style.boxShadow = '0px 4px 4px 0px';
+                createBox.style.boxShadow = '0.5px 3.5px 3px 0.5px black';
+
+                eyeKey = false;
+            }
+        });
     </script>
 </body>
+
 </html>

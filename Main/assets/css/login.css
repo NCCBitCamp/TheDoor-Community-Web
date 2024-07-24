@@ -1,3 +1,4 @@
+
 .content {
     height: 100vh;
     display: flex;
@@ -33,7 +34,6 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 4px 0px;
-    
 }
 
 .inputBox {
@@ -84,8 +84,8 @@ h1 {
     height: 18px;
     position: absolute;
     right: 2.5rem;
-    top: 10.5rem;
-    background-image: url(/Main/assets/images/흰자포함눈.png);
+    top: 10.8rem;
+    background-image: url(/Main/assets/images/join/비밀번호숨김.png);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1000;
@@ -107,10 +107,11 @@ h1 {
     height: 30px;
     background-color: #FBC70E;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    /* margin-bottom: rem; */
     border: 0px;
     color: #000;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .createBtn {
