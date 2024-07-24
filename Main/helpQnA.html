@@ -6,6 +6,8 @@
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/helpQnA.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="navbar">
@@ -48,7 +50,7 @@
             <!-- 게시글이 여기에 추가됩니다 -->
             <li>
                 <div class="post-info">
-                    <h3>오랫동안 접속하지 않았더니 계정이 사라졌어요</h3>
+                    <h5>오랫동안 접속하지 않았더니 계정이 사라졌어요</h5>
                     <p>다시 만드세요</p>
                     <span class="post-date">2024-07-18</span>
                 </div>
@@ -59,7 +61,7 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>제 계정이 중고거래 사이트에 올라갔는데 회수 가능할까요?</h3>
+                    <h5>제 계정이 중고거래 사이트에 올라갔는데 회수 가능할까요?</h5>
                     <p>될가요?</p>
                     <span class="post-date">2024-07-17</span>
                 </div>
@@ -70,7 +72,7 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>모르는 계정이 생겼어요!</h3>
+                    <h5>모르는 계정이 생겼어요!</h5>
                     <p>ㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋ</p>
                     <span class="post-date">2024-07-17</span>
                 </div>
@@ -81,7 +83,7 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                    <h5>계정을 돈으로 주고 살 수 있나요?</h5>
                     <p>어디계신가요? 바로 가겠습니다</p>
                     <span class="post-date">2024-07-17</span>
                 </div>
@@ -92,7 +94,7 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                    <h5>계정을 돈으로 주고 살 수 있나요?</h5>
                     <p>어디계신가요? 바로 가겠습니다</p>
                     <span class="post-date">2024-07-17</span>
                 </div>
@@ -103,7 +105,7 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
+                    <h5>계정을 돈으로 주고 살 수 있나요?</h5>
                     <p>어디계신가요? 바로 가겠습니다</p>
                     <span class="post-date">2024-07-17</span>
                 </div>
@@ -117,14 +119,33 @@
     <div class="write-post-button">
         <a href="helpQnAwrite.html"><button>글쓰기</button></a>
     </div>
-    <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">&raquo;</a>
+    <div>
+        <!-- 페이지네이션 -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>
 <div class="footer">

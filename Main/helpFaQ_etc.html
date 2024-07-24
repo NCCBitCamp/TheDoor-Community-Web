@@ -6,6 +6,7 @@
     <title>Navigation Bar</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/helpFaQ_account.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="navbar">
@@ -43,8 +44,8 @@
             <!-- 게시글이 여기에 추가됩니다 -->
             <li>
                 <div class="post-info">
-                    <h3>오랫동안 접속하지 않았더니 계정이 사라졌어요</h3>
-                    <p>다시 만드세요</p>
+                    <h5>오랫동안 접속하지 않았더니 계정이 사라졌어요</h5>
+                    <p class="comment_content">다시 만드세요</p>
                     <span class="post-date">2024-07-18</span>
                 </div>
                 <div class="post-buttons">
@@ -54,9 +55,9 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>제 계정이 중고거래 사이트에 올라갔는데 회수 가능할까요?</h3>
-                    <p>될가요?</p>
-                    <span class="post-date">2024-07-17</span>
+                    <h5>정보처리기사가 내일 모레인데 어떡하죠?</h5>
+                    <p class="comment_content">한명 제꼈고~</p>
+                    <span class="post-date">2024-07-18</span>
                 </div>
                 <div class="post-buttons">
                     <button>수정</button>
@@ -65,9 +66,9 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>모르는 계정이 생겼어요!</h3>
-                    <p>ㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋㅊㅋ</p>
-                    <span class="post-date">2024-07-17</span>
+                    <h5>공부할 시간이 너무 부족해여...어떡하죠?</h5>
+                    <p class="comment_content">휴가를 쓰고 그 시간에 공부하면 됩니다.</p>
+                    <span class="post-date">2024-07-18</span>
                 </div>
                 <div class="post-buttons">
                     <button>수정</button>
@@ -76,9 +77,9 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
-                    <p>어디계신가요? 바로 가겠습니다</p>
-                    <span class="post-date">2024-07-17</span>
+                    <h5>졸려요</h5>
+                    <p class="comment_content">왜요?</p>
+                    <span class="post-date">2024-07-18</span>
                 </div>
                 <div class="post-buttons">
                     <button>수정</button>
@@ -87,9 +88,9 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
-                    <p>어디계신가요? 바로 가겠습니다</p>
-                    <span class="post-date">2024-07-17</span>
+                    <h5>부계정을 샀는데 정지 먹으면 원래 주인 전화번호로 잡으러 오나요?</h5>
+                    <p class="comment_content">자수 하셨군여 잡으러 가겠습니다.</p>
+                    <span class="post-date">2024-07-18</span>
                 </div>
                 <div class="post-buttons">
                     <button>수정</button>
@@ -98,9 +99,9 @@
             </li>
             <li>
                 <div class="post-info">
-                    <h3>계정을 돈으로 주고 살 수 있나요?</h3>
-                    <p>어디계신가요? 바로 가겠습니다</p>
-                    <span class="post-date">2024-07-17</span>
+                    <h5>암어 배디뱃뱃배디배디 프리디리틀 리스키베디</h5>
+                    <p class="comment_content">뭐든 될대로 되라지 캐치 미 이퓨 캐앤</p>
+                    <span class="post-date">2024-07-18</span>
                 </div>
                 <div class="post-buttons">
                     <button>수정</button>
@@ -109,14 +110,33 @@
             </li>
         </ul>
     </div>
-    <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">&raquo;</a>
+    <div>
+        <!-- 페이지네이션 -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>
 <div class="footer">
