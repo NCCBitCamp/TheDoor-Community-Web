@@ -2,7 +2,7 @@
 <h1>The Door Games</h1>
 <div align=center>
   
-![door](https://github.com/NCCBitCamp/TheDoor-Web/assets/75717432/e6b373f1-00aa-4f80-890c-fde31319050a)
+![main](https://github.com/user-attachments/assets/59f67735-8ebd-416d-bc87-b7b05766750c)
 
 </div>
 <div>
