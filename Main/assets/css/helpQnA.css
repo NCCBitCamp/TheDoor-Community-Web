@@ -118,18 +118,41 @@ body {
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    margin: 30px 0px;
 }
-.pagination a {
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 0 5px;
+
+.pagination .page-item {
+    flex-grow: 0;
 }
-.pagination a:hover {
-    background-color: #666;
+
+.pagination .page-link {
+    border: 1px solid #444; /* 어두운 배경에 맞게 변경 */
+    color: #ccc; /* 어두운 배경에 맞게 변경 */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0;
+    background-color: #333; /* 다크 모드 배경색 추가 */
+}
+
+.pagination .page-item:first-child .page-link {
+    border-radius: 50px 0 0 50px;
+}
+
+.pagination .page-item:last-child .page-link {
+    border-radius: 0 50px 50px 0;
+}
+
+.pagination .page-link:hover {
+    background-color: #555; /* 어두운 배경에 맞게 변경 */
+    color: #fff; /* 어두운 배경에 맞게 변경 */
+}
+.comment_content{
+    padding-top: 1rem;
+}
+h5{
+    padding-top: 1rem;
+    font-weight: bolder;
 }
 .write-post-button {
     display: flex;
